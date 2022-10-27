@@ -1,5 +1,6 @@
-const handlerLambda = async (event, context) => {
-    return 'Hello CDK !'
+exports.handler = async (event, context) => {
+    const name = process.env.NAME
+    const age = process.env.AGE
+    return `Hello CDK! ${name} and age ${age}`
 }
 
-export {handlerLambda}
